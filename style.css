@@ -101,6 +101,7 @@ button {
 	background-color: rgb(226, 232, 240);
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 50% 50%;
 	padding: 30px 20px 80px;
 	gap: 20px;
 }
@@ -140,6 +141,46 @@ h3 {
 	color: #444;
 }
 
-.projects .card{
+.projects .card {
 	border-left: 8px orange solid;
+	display: grid;
+	grid-template-rows: max-content;
+}
+
+.projects .card::after {
+	content: "bla bla bla";
+	justify-self: end;
+	align-self: end;
+}
+
+.trending .card,
+.announcements .card {
+	display: grid;
+	min-height: 0;
+}
+
+.announcements h3 {
+	font-size: 17px;
+}
+
+.announcements .card div {
+	padding: 10px 5px;
+	min-height: 0;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.announcements .card div:first-child {
+	padding-top: 0;
+}
+
+.announcements .card div:not(:last-child) {
+	border-bottom: 2px #bbb solid;
+}
+
+.trending h5 {
+	margin: 0;
+	font-size: 15px;
+	color: black;
+	margin-bottom: 2px;
 }
