@@ -1,9 +1,93 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Thin.woff2");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-ThinItalic.woff2");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Light.woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-LightItalic.woff2");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Regular.woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Italic.woff2");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Medium.woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-MediumItalic.woff2");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Bold.woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-BoldItalic.woff2");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-Black.woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("fonts/Roboto-BlackItalic.woff2");
+	font-weight: 900;
+	font-style: italic;
+}
+
 html,
 body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-family:  Verdana, sans-serif;
+	font-family: "Roboto", Verdana, sans-serif;
 	box-sizing: border-box;
 }
 
@@ -35,19 +119,40 @@ button {
 	padding: 20px;
 	grid-template-rows: repeat(3, max-content);
 	row-gap: 70px;
-	font-weight: bold;
+	font-weight: 500;
+}
+
+.sidebar img {
+	height: 23px;
+	filter: invert(100%);
+	justify-self: center;
 }
 
 .name {
 	padding: 0;
 	margin: 0;
 	font-size: 30px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: max-content max-content;
+	column-gap: 10px;
+}
+
+.name img {
+	height: 45px;
 }
 
 .sidebar ul {
 	display: grid;
 	font-size: 18px;
 	row-gap: 20px;
+}
+
+.sidebar ul li {
+	display: grid;
+	grid-template-columns: 45px max-content;
+	align-items: center;
+	column-gap: 10px;
 }
 
 .main-page {
@@ -147,10 +252,30 @@ h3 {
 	grid-template-rows: max-content;
 }
 
-.projects .card::after {
-	content: "bla bla bla";
-	justify-self: end;
-	align-self: end;
+.project-links {
+	display: grid;
+	column-gap: 25px;
+	grid-template-columns: repeat(3, 25px);
+	justify-content: end;
+}
+
+.watch,
+.repo,
+.favorite {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.favorite {
+	background-image: url(icons/star-plus-outline.svg);
+}
+
+.repo {
+	background-image: url(icons/source-fork.svg);
+}
+
+.watch {
+	background-image: url(icons/eye-plus-outline.svg);
 }
 
 .trending .card,
