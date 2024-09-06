@@ -305,14 +305,17 @@ h3 {
 
 .favorite {
 	background-image: url(icons/star-plus-outline.svg);
+	background-position: bottom;
 }
 
 .repo {
 	background-image: url(icons/source-fork.svg);
+	background-position: bottom;
 }
 
 .watch {
 	background-image: url(icons/eye-plus-outline.svg);
+	background-position: bottom;
 }
 
 .trending .card,
